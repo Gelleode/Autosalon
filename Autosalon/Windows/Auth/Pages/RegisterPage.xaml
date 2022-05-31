@@ -8,7 +8,38 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="RegisterPage">
 
-    <Grid>
-        
+    <Grid Background="#ffdadada" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.ColumnSpan="2" MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="550" CornerRadius="20">
+            <Border.Effect >
+                <DropShadowEffect BlurRadius="35" Color="LightGray" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Зарегистрируйтесь или войдите" FontSize="25" FontWeight="Bold" Margin="0 0 0 20" />
+
+                <Grid Margin="0 0 0 20">
+                    <Button Template="{StaticResource BtnTemplate}" HorizontalAlignment="Left" Content="Регистрация" FontSize="14" FontWeight="DemiBold" Width="100"/>
+                    <Button Template="{StaticResource BtnTemplate}" HorizontalAlignment="Right" Click="BtnAuthClick" Content="Войти" FontSize="14" FontWeight="DemiBold" Width="100"></Button>
+                </Grid>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Vertical" Margin="20 0 0 0">
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Введите логин:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Введите пароль:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Повторите пароль:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right">Email:</TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="20 0 0 0">
+                        <TextBox FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="TextBoxLogin"></TextBox>
+                        <PasswordBox FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="PassBox"></PasswordBox>
+                        <PasswordBox FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="PassBox2"></PasswordBox>
+                        <TextBox FontSize="14" VerticalContentAlignment="Center" Width="250" x:Name="TextBoxEmail"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <Button FontSize="14" FontWeight="DemiBold" Width="300" Template="{StaticResource BtnTemplate}" Content="Зарегистрироваться" Margin="0 20"  Click="BtnRegisterClick"/>
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>
