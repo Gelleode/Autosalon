@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace Autosalon.DBModel
 {
-    public partial class AutoSalonModel : DbContext
+    public partial class AutosalonModel : DbContext
     {
-        public AutoSalonModel()
-            : base("name=AutoSalonConnect")
+        public AutosalonModel()
+            : base("name=AutosalonEntity")
         {
         }
 
@@ -20,6 +20,7 @@ namespace Autosalon.DBModel
         public virtual DbSet<OrderCar> OrderCar { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Staff> Staff { get; set; }
+        public virtual DbSet<Status> Status { get; set; }
         public virtual DbSet<Stock> Stock { get; set; }
         public virtual DbSet<Store> Store { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
@@ -65,6 +66,12 @@ namespace Autosalon.DBModel
             modelBuilder.Entity<Staff>()
                 .HasMany(e => e.Order)
                 .WithRequired(e => e.Staff)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Status>()
+                .HasMany(e => e.Order)
+                .WithRequired(e => e.Status1)
+                .HasForeignKey(e => e.StaffId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Store>()

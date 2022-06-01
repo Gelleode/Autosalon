@@ -21,9 +21,7 @@ namespace Autosalon.DBModel
 
         public int StaffId { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string Status { get; set; }
+        public int Status { get; set; }
 
         public DateTime Date { get; set; }
 
@@ -32,6 +30,8 @@ namespace Autosalon.DBModel
         public virtual Customer Customer { get; set; }
 
         public virtual Staff Staff { get; set; }
+
+        public virtual Status Status1 { get; set; }
 
         public virtual Store Store { get; set; }
 

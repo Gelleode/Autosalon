@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using Autosalon.Windows.Admin;
 using Autosalon.Windows.Manаger;
 
 namespace Autosalon.Windows.Auth.Pages
@@ -18,7 +19,7 @@ namespace Autosalon.Windows.Auth.Pages
         {
             var window = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.IsActive);
 #if DEBUG
-            ManagerWindow newWindow = new ManagerWindow();
+            AdminWindow newWindow = new AdminWindow();
             newWindow.Show();
             Utilities.Manager.MainFrame = null;
             window.Close();

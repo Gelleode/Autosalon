@@ -20,6 +20,10 @@ namespace Autosalon.DBModel
 
         [Required]
         [StringLength(50)]
+        public string Login { get; set; }
+
+        [Required]
+        [StringLength(50)]
         public string Surname { get; set; }
 
         [Required]

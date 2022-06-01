@@ -64,8 +64,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DBModel\AutosalonModel.cs" />
+    <Compile Include="DBModel\Car.cs" />
+    <Compile Include="DBModel\Category.cs" />
+    <Compile Include="DBModel\Customer.cs" />
+    <Compile Include="DBModel\Manufactory.cs" />
+    <Compile Include="DBModel\Order.cs" />
+    <Compile Include="DBModel\OrderCar.cs" />
+    <Compile Include="DBModel\Role.cs" />
+    <Compile Include="DBModel\Staff.cs" />
+    <Compile Include="DBModel\Status.cs" />
+    <Compile Include="DBModel\Stock.cs" />
+    <Compile Include="DBModel\Store.cs" />
+    <Compile Include="DBModel\sysdiagrams.cs" />
+    <Compile Include="DBModel\User.cs" />
     <Compile Include="Utilities\DB.cs" />
     <Compile Include="Utilities\Manager.cs" />
+    <Compile Include="Windows\Admin\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Pages\StockPage.xaml.cs">
+      <DependentUpon>StockPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Auth\Pages\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
@@ -78,6 +98,14 @@
     <Compile Include="Windows\User\UserWindow.xaml.cs">
       <DependentUpon>UserWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Windows\Admin\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Pages\StockPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Auth\AuthWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,19 +114,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DBModel\AutoSalonModel.cs" />
-    <Compile Include="DBModel\Car.cs" />
-    <Compile Include="DBModel\Category.cs" />
-    <Compile Include="DBModel\Customer.cs" />
-    <Compile Include="DBModel\Manufactory.cs" />
-    <Compile Include="DBModel\Order.cs" />
-    <Compile Include="DBModel\OrderCar.cs" />
-    <Compile Include="DBModel\Role.cs" />
-    <Compile Include="DBModel\Staff.cs" />
-    <Compile Include="DBModel\Stock.cs" />
-    <Compile Include="DBModel\Store.cs" />
-    <Compile Include="DBModel\sysdiagrams.cs" />
-    <Compile Include="DBModel\User.cs" />
     <Compile Include="Windows\Auth\AuthWindow.xaml.cs">
       <DependentUpon>AuthWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -147,8 +162,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Windows\Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
