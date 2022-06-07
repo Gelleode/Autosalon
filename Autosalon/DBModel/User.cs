@@ -44,6 +44,12 @@ namespace Autosalon.DBModel
 
         public int RoleId { get; set; }
 
+        [Required]
+        [StringLength(50)]
+        public string Password { get; set; }
+
+        public string Fullname => $"{Surname} {Name} {Middlename}";
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Customer> Customer { get; set; }
 

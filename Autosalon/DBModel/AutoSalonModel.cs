@@ -70,7 +70,7 @@ namespace Autosalon.DBModel
 
             modelBuilder.Entity<Status>()
                 .HasMany(e => e.Order)
-                .WithRequired(e => e.Status1)
+                .WithRequired(e => e.Status)
                 .HasForeignKey(e => e.StaffId)
                 .WillCascadeOnDelete(false);
 

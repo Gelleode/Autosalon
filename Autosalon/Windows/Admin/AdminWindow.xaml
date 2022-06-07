@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Autosalon.Windows.Admin"
         mc:Ignorable="d"
-        Title="AdminWindow" Height="450" Width="800">
+        Title="AdminWindow" Height="450" Width="900">
     <Grid>
         <Grid Background="#e5e5e5" >
             <Grid.RowDefinitions>
@@ -16,6 +16,9 @@
             <StackPanel Grid.Row="0">
                 <StackPanel Background="#FF673AB7" Orientation="Horizontal">
                     <Button Content="Склад" Height="28" Width="120" Click="Storage_Click"/>
+                    <Button Content="Машины" Height="28" Width="120" Click="Car_Click"/>
+                    <Button Content="Производители" Height="28" Width="120" Click="Manufactory_Click"/>
+                    <Button Content="Магазины" Height="28" Width="120" Click="Store_Click"/>
                     <Button Content="Клиенты" Height="28" Width="120" Click="Client_Click"/>
                     <Button Content="Продавцы" Height="28" Width="120" Click="Manager_Click"/>
                     <Button Content="Продажи" Height="28" Width="120" Click="Sells_Click"/>

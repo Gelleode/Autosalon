@@ -10,13 +10,9 @@ namespace Autosalon.DBModel
     public partial class Stock
     {
         [Key]
-        [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int StoreId { get; set; }
+        public int Id { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int StoreId { get; set; }
         public int CarId { get; set; }
 
         public int Quantity { get; set; }

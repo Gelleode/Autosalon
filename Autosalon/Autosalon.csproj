@@ -83,8 +83,47 @@
     <Compile Include="Windows\Admin\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Admin\Pages\CarPage.xaml.cs">
+      <DependentUpon>CarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Pages\ClientPage.xaml.cs">
+      <DependentUpon>ClientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Pages\ManagersPage.xaml.cs">
+      <DependentUpon>ManagersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Pages\ManufactoryPage.xaml.cs">
+      <DependentUpon>ManufactoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Pages\SalePage.xaml.cs">
+      <DependentUpon>SalePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Admin\Pages\StockPage.xaml.cs">
       <DependentUpon>StockPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Pages\StorePage.xaml.cs">
+      <DependentUpon>StorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Windows\AddEditCarWindow.xaml.cs">
+      <DependentUpon>AddEditCarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Windows\AddEditClientWindow.xaml.cs">
+      <DependentUpon>AddEditClientWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Windows\AddEditManagerWindow.xaml.cs">
+      <DependentUpon>AddEditManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Windows\AddEditManufactoryWindow.xaml.cs">
+      <DependentUpon>AddEditManufactoryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Windows\AddEditOrderWindow.xaml.cs">
+      <DependentUpon>AddEditOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Windows\AddEditStockWindow.xaml.cs">
+      <DependentUpon>AddEditStockWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin\Windows\AddEditStoreWindow.xaml.cs">
+      <DependentUpon>AddEditStoreWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Auth\Pages\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
@@ -102,7 +141,59 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\Admin\Pages\CarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Pages\ClientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Pages\ManagersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Pages\ManufactoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Pages\SalePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Admin\Pages\StockPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Pages\StorePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Windows\AddEditCarWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Windows\AddEditClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Windows\AddEditManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Windows\AddEditManufactoryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Windows\AddEditOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Windows\AddEditStockWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Admin\Windows\AddEditStoreWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

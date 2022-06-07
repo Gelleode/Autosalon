@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace Autosalon.DBModel
 {
     using System;
@@ -21,7 +23,7 @@ namespace Autosalon.DBModel
 
         public int StaffId { get; set; }
 
-        public int Status { get; set; }
+        public int StatusId { get; set; }
 
         public DateTime Date { get; set; }
 
@@ -31,9 +33,19 @@ namespace Autosalon.DBModel
 
         public virtual Staff Staff { get; set; }
 
-        public virtual Status Status1 { get; set; }
+        public virtual Status Status { get; set; }
 
         public virtual Store Store { get; set; }
+
+        public decimal Price
+        {
+            get
+            {
+                decimal sum = 0;
+                foreach (var car in OrderCar) sum += car.Price;
+                return sum;
+            }
+        }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderCar> OrderCar { get; set; }

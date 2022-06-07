@@ -1,0 +1,52 @@
+﻿<Window x:Class="Autosalon.Windows.Admin.Windows.AddEditCarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Autosalon.Windows.Admin.Windows"
+        mc:Ignorable="d"
+        Title="AddEditCarWindow" Height="450" Width="800"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Background="{x:Null}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border  Grid.Row="1" MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="550" CornerRadius="20">
+            <Border.Effect >
+                <DropShadowEffect BlurRadius="35" Color="LightGray" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Добавление и редактирование" FontSize="25" FontWeight="Bold" Margin="0 0 0 20" />
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Vertical" Margin="20 0 0 0">
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Производитель:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Модель:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Категория:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Год:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Лошадиных сил:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right">Цена:</TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="20 0 0 0">
+                        <ComboBox Name="CBoxCar" SelectedItem="{Binding Manufactory}" DisplayMemberPath="Title" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" ></ComboBox>
+                        <TextBox Text="{Binding Model}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="TBoxModel"></TextBox>
+                        <ComboBox SelectedItem="{Binding Category}" DisplayMemberPath="Category_Name" FontSize="14" VerticalContentAlignment="Center" Width="250" x:Name="CBoxCategory"></ComboBox>
+                        <TextBox Text="{Binding Year}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="TBoxYear"></TextBox>
+                        <TextBox Text="{Binding HorsePower}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="TBoxHorsePower"></TextBox>
+                        <TextBox Text="{Binding Price}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="TBoxPrice"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0 20 0 0" HorizontalAlignment="Center">
+                    <Button Template="{StaticResource BtnTemplate}" HorizontalAlignment="Left" Content="Сохранить" Name="SaveBt" Click="SaveBtn_Click" Margin="0 0 20 0" FontSize="14" FontWeight="DemiBold" Width="100"/>
+                    <Button Template="{StaticResource BtnTemplate}" HorizontalAlignment="Right"  Content="Отмена" Name="CancelBt" Click="CancelBtn_Click" Margin="20 0 0 0" FontSize="14" FontWeight="DemiBold" Width="100"></Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

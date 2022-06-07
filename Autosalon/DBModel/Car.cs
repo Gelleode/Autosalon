@@ -35,6 +35,8 @@ namespace Autosalon.DBModel
         [StringLength(200)]
         public string PhotoPath { get; set; }
 
+        public string Fullname => $"{Manufactory.Title} {Model}";
+
         public virtual Category Category { get; set; }
 
         public virtual Manufactory Manufactory { get; set; }

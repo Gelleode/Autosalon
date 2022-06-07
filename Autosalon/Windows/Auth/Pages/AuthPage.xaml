@@ -10,9 +10,6 @@
 
     <Grid>
         <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="550" CornerRadius="20">
-            <Border.Effect >
-                <DropShadowEffect BlurRadius="35" Color="LightGray" ShadowDepth="0" />
-            </Border.Effect>
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="Авторизация" FontSize="25" FontWeight="Bold" Margin="0 0 0 20" />
 

@@ -1,0 +1,48 @@
+﻿<Window x:Class="Autosalon.Windows.Admin.Windows.AddEditStoreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Autosalon.Windows.Admin.Windows"
+        mc:Ignorable="d"
+        Title="AddEditStoreWindow" Height="450" Width="800"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Background="{x:Null}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border  Grid.Row="1" MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="550" CornerRadius="20">
+            <Border.Effect >
+                <DropShadowEffect BlurRadius="35" Color="LightGray" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Добавление и редактирование" FontSize="25" FontWeight="Bold" Margin="0 0 0 20" />
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Vertical" Margin="20 0 0 0">
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Город:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Улица:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right" Margin="0 0 0 8">Контактный телефон:</TextBlock>
+                        <TextBlock FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Right">Почта:</TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="20 0 0 0">
+                        <TextBox Text="{Binding City}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="TBoxModel"></TextBox>
+                        <TextBox Text="{Binding Street}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="TBoxYear"></TextBox>
+                        <TextBox Text="{Binding Phone}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="TBoxHorsePower"></TextBox>
+                        <TextBox Text="{Binding Email}" FontSize="14" VerticalContentAlignment="Center" Width="250" Margin="0 0 0 5" x:Name="TBoxPrice"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0 20 0 0" HorizontalAlignment="Center">
+                    <Button Template="{StaticResource BtnTemplate}" HorizontalAlignment="Left" Content="Сохранить" Name="SaveBt" Click="SaveBtn_Click" Margin="0 0 20 0" FontSize="14" FontWeight="DemiBold" Width="100"/>
+                    <Button Template="{StaticResource BtnTemplate}" HorizontalAlignment="Right"  Content="Отмена" Name="CancelBt" Click="CancelBtn_Click" Margin="20 0 0 0" FontSize="14" FontWeight="DemiBold" Width="100"></Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

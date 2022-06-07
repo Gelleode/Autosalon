@@ -5,7 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Autosalon"
         mc:Ignorable="d"
-        Title="Авторизация" Height="450" Width="800">
+
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Background="{x:Null}"
+        Title="Авторизация" Height="380" Width="550">
     <Grid>
         <Frame Name="AuthFrame" NavigationUIVisibility="Hidden"></Frame>
     </Grid>

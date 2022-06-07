@@ -1,16 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Autosalon.Utilities;
 using Autosalon.Windows.Admin.Pages;
 
@@ -30,7 +19,12 @@ namespace Autosalon.Windows.Admin
 
         private void BtnBack_OnClick(object sender, RoutedEventArgs e)
         {
-        
+            MainFrame.GoBack();
+        }
+
+        private void Store_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new StorePage());
         }
 
         private void Storage_Click(object sender, RoutedEventArgs e)
@@ -38,24 +32,36 @@ namespace Autosalon.Windows.Admin
             MainFrame.Navigate(new StockPage());
         }
 
+        private void Car_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new CarPage());
+        }
+        private void Manufactory_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new ManufactoryPage());
+        }
+
         private void Client_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new ClientPage());
         }
 
         private void Manager_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new ManagersPage());
         }
 
         private void Sells_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new SalePage());
         }
 
         private void MainFrame_OnContentRendered(object sender, EventArgs e)
         {
-            BtnBack.Visibility = MainFrame.CanGoBack ? Visibility.Visible : Visibility.Hidden;
+            if (MainFrame.CanGoBack)
+                BtnBack.Visibility = Visibility.Visible;
+            else
+                BtnBack.Visibility = Visibility.Hidden;
         }
     }
 }

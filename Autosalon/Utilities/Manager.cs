@@ -7,5 +7,6 @@ namespace Autosalon.Utilities
     {
         public static Frame MainFrame { get; set; }
         public static User User { get; set; }
+        public static Store Store { get; set; }
     }
 }

@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:Autosalon"
              StartupUri="Windows/Auth/AuthWindow.xaml">
     <Application.Resources>
+        <Style TargetType="DataGrid">
+            <Setter Property="HorizontalGridLinesBrush" Value="DarkGray"></Setter>
+            <Setter Property="RowBackground" Value="LightGray"></Setter>
+            <Setter Property="AlternatingRowBackground" Value="White"></Setter>
+        </Style>
         <ControlTemplate TargetType="Button" x:Key="BtnTemplate">
             <Border x:Name="buttonBorder2" CornerRadius="4"
                     BorderBrush="{TemplateBinding BorderBrush}"

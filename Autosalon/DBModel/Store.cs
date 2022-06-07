@@ -34,6 +34,7 @@ namespace Autosalon.DBModel
         [Required]
         [StringLength(50)]
         public string Street { get; set; }
+        public string FullAddress => $"{City} {Street}";
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }
