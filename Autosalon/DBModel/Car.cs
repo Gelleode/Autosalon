@@ -12,7 +12,7 @@ namespace Autosalon.DBModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Car()
         {
-            OrderCar = new HashSet<OrderCar>();
+            Order = new HashSet<Order>();
             Stock = new HashSet<Stock>();
         }
 
@@ -35,14 +35,14 @@ namespace Autosalon.DBModel
         [StringLength(200)]
         public string PhotoPath { get; set; }
 
-        public string Fullname => $"{Manufactory.Title} {Model}";
-
         public virtual Category Category { get; set; }
+
+        public string Fullname => $"{Manufactory.Title} {Model}";
 
         public virtual Manufactory Manufactory { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderCar> OrderCar { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Stock> Stock { get; set; }

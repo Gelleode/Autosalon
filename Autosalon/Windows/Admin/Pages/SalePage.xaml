@@ -20,15 +20,9 @@
                 <DataGridTextColumn FontSize="14" Header="Фамилия клиента" Binding="{Binding Customer.User.Surname}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn FontSize="14" Header="Магазин" Binding="{Binding Store.FullAddress}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn FontSize="14" Header="Статус заказа" Binding="{Binding Status.Status_Title}" Width="*"></DataGridTextColumn>
-                <DataGridTextColumn FontSize="14" Header="Сумма" Binding="{Binding Price}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn FontSize="14" Header="Машина" Binding="{Binding Car.Fullname}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn FontSize="14" Header="Сумма" Binding="{Binding Car.Price}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn FontSize="14" Header="Дата" Binding="{Binding Date,StringFormat='{}{0:dd.MM.yyyy}'}" Width="*"></DataGridTextColumn>
-                <DataGridTemplateColumn Width="auto">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Редактировать" Name="BtnEdit" Click="BtnEdit_Click"></Button>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 

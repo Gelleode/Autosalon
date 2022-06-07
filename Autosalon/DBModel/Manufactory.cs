@@ -20,6 +20,7 @@ namespace Autosalon.DBModel
         [Required]
         [StringLength(50)]
         public string Title { get; set; }
+
         public int Cars => Car.Count;
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

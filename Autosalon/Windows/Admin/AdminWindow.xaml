@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Autosalon.Windows.Admin"
         mc:Ignorable="d"
-        Title="AdminWindow" Height="450" Width="900">
+        Title="AdminWindow" Height="450" Width="900"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid Background="#e5e5e5" >
             <Grid.RowDefinitions>

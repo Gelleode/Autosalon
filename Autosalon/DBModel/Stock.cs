@@ -9,10 +9,10 @@ namespace Autosalon.DBModel
     [Table("Stock")]
     public partial class Stock
     {
-        [Key]
         public int Id { get; set; }
 
         public int StoreId { get; set; }
+
         public int CarId { get; set; }
 
         public int Quantity { get; set; }

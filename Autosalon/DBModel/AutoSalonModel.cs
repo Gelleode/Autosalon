@@ -8,7 +8,7 @@ namespace Autosalon.DBModel
     public partial class AutosalonModel : DbContext
     {
         public AutosalonModel()
-            : base("name=AutosalonEntity")
+            : base("name=AutosalonConStr")
         {
         }
 
@@ -17,7 +17,6 @@ namespace Autosalon.DBModel
         public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<Manufactory> Manufactory { get; set; }
         public virtual DbSet<Order> Order { get; set; }
-        public virtual DbSet<OrderCar> OrderCar { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Staff> Staff { get; set; }
         public virtual DbSet<Status> Status { get; set; }
@@ -29,7 +28,7 @@ namespace Autosalon.DBModel
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Car>()
-                .HasMany(e => e.OrderCar)
+                .HasMany(e => e.Order)
                 .WithRequired(e => e.Car)
                 .WillCascadeOnDelete(false);
 
@@ -51,11 +50,6 @@ namespace Autosalon.DBModel
             modelBuilder.Entity<Manufactory>()
                 .HasMany(e => e.Car)
                 .WithRequired(e => e.Manufactory)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Order>()
-                .HasMany(e => e.OrderCar)
-                .WithRequired(e => e.Order)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Role>()

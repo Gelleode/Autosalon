@@ -70,7 +70,6 @@
     <Compile Include="DBModel\Customer.cs" />
     <Compile Include="DBModel\Manufactory.cs" />
     <Compile Include="DBModel\Order.cs" />
-    <Compile Include="DBModel\OrderCar.cs" />
     <Compile Include="DBModel\Role.cs" />
     <Compile Include="DBModel\Staff.cs" />
     <Compile Include="DBModel\Status.cs" />
